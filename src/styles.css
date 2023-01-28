@@ -7,143 +7,124 @@
     font-family: 'Ubuntu', sans-serif;
 }
 /*NAVIGATION SECTION CSS*/
-.head{
-    display: flex;
-    flex-direction: column;
-    height: 40vw;
-    width: 100%;
+.navigation{
     background: url("./images/bg-pattern-intro-desktop.svg"), linear-gradient(10deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-size: 170%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     background-repeat: no-repeat;
     background-position: 20% 52%;
     border-radius: 0 0 0 100px;
-    align-items: center;
+    height: 60vh;
+}
+.navigation p{
+    cursor: pointer;
+}
+.navigation-text{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+.navigation h1{
+    text-align: center;
+    color: white;
+}
+.desplegables-container{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background: white;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.desplegables-container p{
+    padding: 5px 0;
+}
+.desplegables-container p:hover{
+    transition: 0.5s;
+    color: black;
+}
+.product-subcontainer{
+    margin-left: -5%;
+}
+.start-button-nav:hover{
+    transition: 1s;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    filter: blur(50);
+}
+.mostrarMobile{
+    display: flex;
+    animation: mostrar 1s;
+}
+.signButton:hover{
+    transition: 1s;
+    background: transparent;
+    color: white;
+}
+.learn-button-nav:hover{
+    transition: 1s;
+    background: white;
+    color: hsl(356, 100%, 66%);
+}
+.links-nav{
+    position: relative;
+    left: -5%;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    width: 40%;
     justify-content: space-evenly;
 }
-.mobileDiv{
+.login-mobile{
+    display: none;
+}
+.login-desktop{
+    width: 20%;
     display: flex;
-    gap: 15px;
+    justify-content: space-around;
+}
+.loginButton{
+    padding: 5px 10px 5px 10px;
+    background: transparent;
+    border: none;
+    color: white;
+}
+.signButton{
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+    background: white;
+    color: hsl(356, 100%, 66%);
 }
 nav{
     display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    padding-bottom: 1%;
+    justify-content: space-around;
 }
-.dropdowns-menu-mobile{
-    display: none;
+.navigation-buttons{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 35%;
 }
-.login-nav-mobile{
-    display: none;
+.navigation-buttons button{
+    padding: 10px 15px;
+    border-radius: 17px;
 }
-nav p{
+.start-button-nav{
+    color: hsl(356, 100%, 66%);
+    border: none;
     cursor: pointer;
 }
-.head h1{
-    color: white;
-    font-weight: 500;
-}
-.head p{
-    padding-bottom: 3%;
-    color: hsl(255, 100%, 100%, 75%);
-}
-.dropdowns{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 50%;
-    color: hsl(255, 100%, 100%, 75%);
-}
-.dropdowns-menu{
-    display: flex;
-    flex-direction: column;
-}
-.dropdowns-menu p:hover{
-    transition: 1s;
-    color: white;
-    text-decoration: underline;
-}
-.login{
-    display: flex;
-    width: 20%;
-    justify-content: space-between;
-    font-weight: 700;
-}
-.loginMobile{
-    display: none;
-}
-.login .sign{
-    background: white;
-    color: hsl(356, 100%, 66%);
-    padding: 5px 15px 5px 15px;
-    border-radius: 15px;
-    margin-top: -5px;
-}
-.buttons{
-    width: 40%;
-    display: flex;
-    justify-content: space-evenly;
-    font-family: 'Overpass', sans-serif;
-}
-.buttons button{
-    width: 40%;
-    padding: 10px 0 10px 0;
-    border-radius: 20px;
-    border: none;
-}
-.buttons .free{
-    background: white;
-    color: hsl(356, 100%, 66%);
-}
-.buttons .free:hover{
-    transition: 1s;
+.learn-button-nav{
     background: transparent;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
 }
-.buttons .more{
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-}
-.buttons .more:hover{
-    transition: 1s;
-    color: hsl(356, 100%, 66%);
-    background: white;
-}
-.dropdown-subcontainer{
-    position: absolute;
-    margin-top: 3%;
-    background-color: white;
-    padding: 10px 20px 10px 20px;
-    border-radius: 5px;
-}
-.dropdown-subcontainer1{
-    margin-left: -5%;
-    display: none;
-}
-.dropdown-subcontainer2{
-    margin-left: 1%;
-    display: none;
-}
-.dropdown-subcontainer3{
-    margin-left: 1%;
-    display: none;
-}
-.mostrar{
-    display: block;
-    animation: mostrar 1s;
-}
-.dropdown-subcontainer p{
-    color: black;
-    padding: 5px 0;
-}
-.dropdown-subcontainer p:hover{
-    text-decoration: none;
-    color: black;
-}
-
 /*Future section styles*/
 .future-container{
     height: 40vw;
@@ -278,91 +259,77 @@ footer p:hover{
     *{
         text-align: center;
     }
-    .head{
+    .navigation{
         height: 100vh;
+        background: url("./images/bg-pattern-intro-mobile.svg"), linear-gradient(10deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        background-position: center center;
     }
     nav{
-        margin-left: 0;
-    }
-    .dropdowns-menu{
-        display: block;
-        color: black;
-    }
-    .dropdowns-menu-mobile{
-        display: block;
-    }
-    .dropdown-subcontainer-mobile{
-        display: flex;
-        flex-direction: column;
         width: 90%;
+        margin-left: 5%;
+        justify-content: space-between;
+    }
+    .desplegables-container{
+        display: none;
+        position: relative;
         background: hsl(240, 2%, 79%);
-        margin: 0 0 5% 5%;
-        padding: 5% 0;
-        border-radius: 5px;
-        display: none;
-        opacity: 0;
-    }
-    .login-nav-mobile{
-        display: block;
-        padding-top: 10px;
-    }
-    .mobileDiv{
-        display: none;
-    }
-    .secondMobileNav{
         width: 90%;
-        position: absolute;
-        max-height: 120vh;
-        padding: 5% 0;
-        top: 25%;
-        left: 5%;
-        background: white;
-        display: flex;
-        flex-direction: column;
-        z-index: 100;
-        box-shadow: 0 0 20px 1px rgb(73, 68, 68);
         border-radius: 10px;
+        padding: 10px 0;
+        margin: 10px 0 10px 5%;
+        margin-top: 0;
+    }
+    .desplegables-container p{
+        padding: 5px 0;
+    }
+    .login-mobile{
+        display: block;
+    }
+    .login-desktop{
+        content: url("./images/icon-hamburger.svg");
+        width: 8%;
+        cursor: pointer;
+    }
+    .links-nav{
+        position: absolute;
         display: none;
+        flex-direction: column;
+        background: white;
+        color: black;
+        width: 90%;
+        left: 5%;
+        top: 25%;
+        max-height: 130vh;
+        min-height: 30vh;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+        padding: 5px 0;
     }
     .mostrarMobile{
-        display: block;
-        transition: 1s;
-        opacity: 1;
+        display: flex;
+        animation: mostrar 1s;
     }
-    .secondMobileNav p{
+    .navigation-buttons{
+        width: 70%;
+        margin-left: 15%;
+    }
+    .login-button-mobile{
         color: black;
-        width: 30%;
-        margin-left: 35%;
+        margin-left: -10px;
+        margin-top: 10px;
     }
-    .dropdown-subcontainer-mobile p{
-        color: hsl(207, 13%, 34%);
-    }
-    .dropdown-subcontainer{
-        position: relative;
-    }
-    .login{
-        content: url('./images/icon-hamburger.svg');
-        width: 10%;
-    }
-    .sign-mobile{
-        position: relative;
-        left: -10px;
-        padding: 5px 10px 5px 10px;
-        background: hsl(356, 100%, 66%);
-        border-radius: 20px;
+    .sign-button-mobile{
+        padding: 5px 10px;
         color: white;
+        background: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        width: 20%;
+        margin-left: 37%;
+        margin-top: 10px;
+        border-radius: 20px;
+        margin: 10px 0 10px 37%;
     }
-    hr{
-        width: 80%;
-        margin-left: 10%;
-    }
-    .buttons{
-        width: 90%;
-        justify-content: space-evenly;
-    }
-    .buttons button{
-        padding: 15px 0 15px 0;
-        border-radius: 30px;
+    .sections-mobile-text{
+        padding: 10px 0;
     }
 
     /*FUTURE MOBILE*/
